@@ -1,0 +1,5 @@
+lang=go
+genJson=2
+genXorm=0
+prefix=t_
+ignoreColumnsJSON=
