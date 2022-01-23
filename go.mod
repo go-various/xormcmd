@@ -7,9 +7,7 @@ require (
 	github.com/go-sql-driver/mysql v1.4.1
 	github.com/lib/pq v1.1.1
 	github.com/lunny/log v0.0.0-20160921050905-7887c61bf0de
-	github.com/mattn/go-sqlite3 v1.10.0
 	github.com/ziutek/mymysql v1.5.4
-	gopkg.in/yaml.v2 v2.2.8 // indirect
 	xorm.io/core v0.7.2
 	xorm.io/xorm v0.8.0
 )
