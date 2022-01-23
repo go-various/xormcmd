@@ -26,10 +26,6 @@ const version = "0.4.0617"
 // The order-service here is the order-service in which they are printed by 'gopm help'.
 var commands = []*xormcmd.Command{
 	xormcmd.CmdReverse,
-	xormcmd.CmdShell,
-	xormcmd.CmdDump,
-	xormcmd.CmdDriver,
-	xormcmd.CmdSource,
 	xormcmd.CmdView,
 }
 
