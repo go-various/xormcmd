@@ -1,10 +1,10 @@
 #!/bin/bash
 cmd=build/bin/xorm
 function model() {
-    $cmd reverse mysql "user:password@tcp(localhost)/test" templates/goxorm build/models $1
+    $cmd reverse mysql "root:123456@tcp(localhost)/hytest" templates/goxorm build/models $1
 }
 function view() {
-    $cmd view mysql "user:password@tcp(localhost)/test" templates/goview build/views $1
+    $cmd view mysql "root:123456@tcp(localhost)/hytest" templates/goview build/views $1
 }
 
 case $1 in

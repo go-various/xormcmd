@@ -81,10 +81,10 @@ func runView(cmd *Command, args []string) {
 		return
 	}
 
-	var isMultiFile bool = true
-	if use, ok := cmd.Flags["-s"]; ok {
-		isMultiFile = !use
-	}
+	//var isMultiFile bool = true
+	//if use, ok := cmd.Flags["-s"]; ok {
+	//	isMultiFile = !use
+	//}
 
 	curPath, err := os.Getwd()
 	if err != nil {
