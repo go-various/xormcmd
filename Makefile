@@ -5,7 +5,7 @@ linux-target=xorm
 build-dir=build
 bin-dir=$(build-dir)/bin
 mac:
-	CGO_ENABLED=0  go build -o $(bin-dir)/$(mac-target) --tags=mysql
+	CGO_ENABLED=0  go build -o $(bin-dir)/$(mac-target)
 
 win:
 	CGO_ENABLED=0 GOOS=windows  GOARCH=amd64  go build -o $(bin-dir)bin/$(win-target) --tags=mysql
