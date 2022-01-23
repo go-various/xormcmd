@@ -5,6 +5,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/go-various/xormcmd"
 	"io"
 	"os"
 	"runtime"
@@ -20,22 +21,16 @@ const go11tag = true
 
 const version = "0.4.0617"
 
-var supportedDrivers = map[string]string{
-	"mysql":    "github.com/go-sql-driver/mysql",
-	"mymysql":  "github.com/ziutek/mymysql/godrv",
-	"postgres": "github.com/lib/pq",
-	"mssql":    "github.com/denisenkom/go-mssqldb",
-}
 
 // Commands lists the available commands and help topics.
 // The order-service here is the order-service in which they are printed by 'gopm help'.
-var commands = []*Command{
-	CmdReverse,
-	CmdShell,
-	CmdDump,
-	CmdDriver,
-	CmdSource,
-	CmdView,
+var commands = []*xormcmd.Command{
+	xormcmd.CmdReverse,
+	xormcmd.CmdShell,
+	xormcmd.CmdDump,
+	xormcmd.CmdDriver,
+	xormcmd.CmdSource,
+	xormcmd.CmdView,
 }
 
 func init() {

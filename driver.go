@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-package main
+package xormcmd
 
 import "fmt"
 
@@ -14,6 +14,12 @@ list all supported drivers
 `,
 }
 
+var supportedDrivers = map[string]string{
+	"mysql":    "github.com/go-sql-driver/mysql",
+	"mymysql":  "github.com/ziutek/mymysql/godrv",
+	"postgres": "github.com/lib/pq",
+	"mssql":    "github.com/denisenkom/go-mssqldb",
+}
 func init() {
 	CmdDriver.Run = runDriver
 	CmdDriver.Flags = map[string]bool{}

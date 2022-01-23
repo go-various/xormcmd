@@ -1,4 +1,4 @@
-package main
+package xormcmd
 
 var (
 	genXorm                   = 0

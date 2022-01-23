@@ -4,7 +4,6 @@ package {{.Models}}
 {{if gt $ilen 0}}
 import (
     "encoding/json"
-    "github.com/go-various/xormplus"
 	{{range .Imports}}"{{.}}"{{end}}
 )
 {{end}}
@@ -33,8 +32,5 @@ func (o *{{Mapper .Name}}) ID() interface{} {
     {{else}}
     panic("multiplex primary keys unsupported")
     {{end}}
-}
-func (o *{{Mapper .Name}}) NewEntity(dao xormplus.XormPlus) xormplus.Entity {
-	return xormplus.NewEntity(dao, o)
 }
 {{end}}

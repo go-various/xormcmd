@@ -4,7 +4,7 @@
 
 // +build sqlite3
 
-package main
+package xormcmd
 
 import (
 	_ "github.com/mattn/go-sqlite3"

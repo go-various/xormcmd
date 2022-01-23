@@ -1,11 +1,10 @@
-module github.com/go-various/cmd
+module github.com/go-various/xormcmd
 
 go 1.15
 
 require (
 	github.com/denisenkom/go-mssqldb v0.0.0-20190707035753-2be1aa521ff4
 	github.com/go-sql-driver/mysql v1.4.1
-	github.com/go-various/xormplus v0.0.0-20211014103727-5b0fdce7078a
 	github.com/lib/pq v1.1.1
 	github.com/lunny/log v0.0.0-20160921050905-7887c61bf0de
 	github.com/mattn/go-sqlite3 v1.10.0
