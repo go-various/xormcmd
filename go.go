@@ -22,7 +22,7 @@ var (
 	GoLangTmpl     LangTmpl = LangTmpl{
 		template.FuncMap{
 			"Mapper":     mapper.Table2Obj,
-			"Type":       typestring,
+			"Kind":       typestring,
 			"Tag":        tag,
 			"UnTitle":    unTitle,
 			"gt":         gt,
@@ -328,7 +328,7 @@ func tag(table *core.Table, col *core.Column) string {
 		}
 	}
 	tags = append(tags, "name:\""+col.Comment+"\"")
-	if !col.Nullable && genXorm == 0{
+	if !col.Nullable && genXorm == 0 {
 		tags = append(tags, "validate:\"required\"")
 	}
 	if len(res) > 0 && genXorm > 0 {
