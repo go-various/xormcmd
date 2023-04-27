@@ -21,7 +21,6 @@ const go11tag = true
 
 const version = "0.4.0617"
 
-
 // Commands lists the available commands and help topics.
 // The order-service here is the order-service in which they are printed by 'gopm help'.
 var commands = []*xormcmd.Command{
@@ -56,7 +55,7 @@ func main() {
 		}
 	}
 
-	fmt.Fprintf(os.Stderr, "xorm: unknown subcommand %q\nRun 'xorm help' for usage.\n", args[0])
+	fmt.Fprintf(os.Stderr, "xorm: unknown subcommand %q\nStartup 'xorm help' for usage.\n", args[0])
 	setExitStatus(2)
 	exit()
 }
@@ -148,7 +147,7 @@ func help(args []string) {
 		}
 	}
 
-	fmt.Fprintf(os.Stderr, "Unknown help topic %#q.  Run 'xorm help'.\n", arg)
+	fmt.Fprintf(os.Stderr, "Unknown help topic %#q.  Startup 'xorm help'.\n", arg)
 	os.Exit(2) // failed at 'gopm help cmd'
 }
 
